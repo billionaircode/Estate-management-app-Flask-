@@ -44,14 +44,14 @@ class GuestModel(db.Model):
 
         sender = guest.find_by_user_id(user_id)
 
-        url = "https://d7sms.p.rapidapi.com/secure/send"
+        url = "https://"
 
         payload = "{\r\n    \"content\": \"Your entry code is {entry_code}\",\r\n    \"from\": \"{sender}\",\r\n    \"to\": {recipient}\r\n}"
         headers = {
             'content-type': "application/json",
-            'authorization': "Basic d3lzbjEwMzM6amlibHN5T1A=",
-            'x-rapidapi-key': "054171df22msh5cc95a48a99828dp1dad02jsn20d65ecad36a",
-            'x-rapidapi-host': "d7sms.p.rapidapi.com"
+            'authorization': "",
+            'x-rapidapi-key': "",
+            'x-rapidapi-host': ""
             }
 
         response = requests.request("POST", url, data=payload, headers=headers)
